@@ -5,7 +5,7 @@ from torch.utils.data import Dataset
 
 class ClassifierMachine(nn.Module):
 
-    def __init__(self, backbone_machine, num_cls, max_len=128, device=None):
+    def __init__(self, backbone_machine, num_cls, input_dim, max_len=128, device=None):
         factory_kwargs = {'device': device}
         super(ClassifierMachine, self).__init__()
         self.backbone_machine = backbone_machine
@@ -13,13 +13,16 @@ class ClassifierMachine(nn.Module):
         self.max_len = max_len
         self.cls_embeddings = \
             nn.Parameter(torch.randn(self.num_cls,self.backbone_machine.dim_model))
+        
+        self.token_embedding = nn.Linear(input_dim, self.backbone_machine.dim_model)
+
         self.pos_embeddings = \
             nn.Parameter(torch.randn(self.max_len,self.backbone_machine.dim_model))
     
     def forward(self, x, key_padding_mask=None, attn_mask=None, device=None):
         """
         Args:
-            x: tensor with shape [batch, len, dim]
+            x: tensor with shape [batch, len, input_dim]
             param2: This is a second param.
 
         Returns:
@@ -30,7 +33,9 @@ class ClassifierMachine(nn.Module):
         pos_batched = self.pos_embeddings.unsqueeze(0).repeat(batch_size, 1, 1)
 
         temp = x
-        temp = temp + pos_batched[:, :len, :]
+        temp = self.token_embedding(temp)
+        print(temp.shape)
+        temp = temp + pos_batched[:, :len_inputs, :]
         temp = torch.cat((cls_batched, temp), dim=1)
         temp = self.backbone_machine(temp)
         return temp[:, :self.num_cls, :]
