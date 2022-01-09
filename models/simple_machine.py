@@ -18,7 +18,7 @@ class SimpleFunc(nn.Module):
         self.lin_q = nn.Linear(dim_model, dim_model, **factory_kwargs)
         self.lin_v = nn.Linear(dim_model, dim_model, **factory_kwargs)
         #self.code = nn.parameter.Parameter(F.normalize(torch.randn(dim_model), dim=0))
-        self.type_vec = nn.parameter.Parameter(F.normalize(torch.randn(dim_model), dim=0), requires_grad=False).to(device)
+        self.type_vec = nn.parameter.Parameter(F.normalize(torch.randn(dim_model), dim=0), requires_grad=False)
     
     def get_mask(self, src, eps = 1e-6):
         """
