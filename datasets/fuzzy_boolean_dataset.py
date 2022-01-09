@@ -4,6 +4,10 @@ import random
 import numpy as np
 from inspect import signature
 from tqdm.auto import tqdm
+import torch
+from torch.utils.data import Dataset
+
+
 
 class FuzzyBooleanGenerator():
 
@@ -69,6 +73,20 @@ class FuzzyBooleanGenerator():
         return 1 - (1 - a) * (1 - b)
     
 
-
-
+class FuzzyBooleanDataset(Dataset):
+    def __init__(self, dataset_file):
+        loaded_numpy = np.load(dataset_file, allow_pickle=True)
+        self.X_array = loaded_numpy.item()['X']
+        self.Y_array = loaded_numpy.item()['Y']
         
+    def __len__(self):
+        return len(self.X_array)
+    
+    def get_num_functions(self):
+        return self.Y_array.shape[1]
+    
+    def get_features_dim(self):
+        return self.x_array.shape[1]
+
+    def __getitem__(self, idx):
+        return self.X_array[idx], self.Y_array[idx]
