@@ -8,7 +8,7 @@ class SimpleFunc(nn.Module):
         assert dim_model % num_heads == 0
         factory_kwargs = {'device': device}
         super(SimpleFunc, self).__init__()
-        self.attention = nn.MultiheadAttention(dim_model, num_heads, batch_first=batch_first, **factory_kwargs)
+        self.attention = nn.MultiheadAttention(dim_model, num_heads, batch_first =batch_first, **factory_kwargs)
         self.linear1 = nn.Linear(dim_model, dim_hid, **factory_kwargs)
         self.dropout = nn.Dropout(dropout)
         self.linear2 = nn.Linear(dim_hid, dim_model, **factory_kwargs)
