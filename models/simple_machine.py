@@ -97,8 +97,9 @@ class SimpleEncoder(nn.Module):
         factory_kwargs = {'dim_model': dim_model, 'dim_hid':dim_hid, 'num_iter':num_iter, 'num_funcs':num_funcs,\
                           'device': device, 'dropout': dropout, 'activation': activation, 'num_heads':num_heads}
         super(SimpleEncoder, self).__init__()
+        self.dim_model = dim_model
         self.layers = nn.ModuleList([SimpleRowIter(**factory_kwargs) for i in range(num_layer)])
-    
+
     def forward(self, src, key_padding_mask=None, attn_mask=None):
       factory_kwargs = {'key_padding_mask': key_padding_mask, 'attn_mask':attn_mask}
       temp = src
