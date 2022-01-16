@@ -17,6 +17,10 @@ class SimpleFunc(nn.Module):
         self.lin_k = nn.Linear(dim_model, dim_model, **factory_kwargs)
         self.lin_q = nn.Linear(dim_model, dim_model, **factory_kwargs)
         self.lin_v = nn.Linear(dim_model, dim_model, **factory_kwargs)
+
+        self.layernorm1 = nn.LayerNorm(dim_model)
+        self.layernorm2 = nn.LayerNorm(dim_model)
+
         #self.code = nn.parameter.Parameter(F.normalize(torch.randn(dim_model), dim=0))
         self.type_vec = nn.parameter.Parameter(F.normalize(torch.randn(dim_model), dim=0), requires_grad=False)
     
@@ -47,12 +51,14 @@ class SimpleFunc(nn.Module):
         key = self.lin_k(temp)
         value = self.lin_k(temp)
         attn_output, attn_output_weights = self.attention(temp, temp, temp, key_padding_mask=mask)#, attn_mask=mask)
+        attn_output = self.layernorm1(attn_output)
         temp = self.linear1(attn_output)
         temp = self.dropout(self.activation(temp))
         temp = self.activation(self.linear2(temp))
         output_mask = mask.unsqueeze(-1).repeat(1,1,src.shape[-1])
         temp = temp.masked_fill(output_mask == 1 , 0)
-        temp = src + temp
+        temp = self.layernorm2(temp)
+        #temp = src + temp
         return temp
 
 
@@ -64,6 +70,7 @@ class SimpleFuncsRow(nn.Module):
         super(SimpleFuncsRow, self).__init__()
         self.funcs = nn.ModuleList([SimpleFunc(**factory_kwargs) for i in range(num_funcs)])
         self.type_inference = nn.Sequential(nn.Linear(dim_model, dim_hid, device=device), nn.ReLU(), nn.Linear(dim_hid, dim_model, device=device)).to(device)
+        self.layernorm = nn.LayerNorm(dim_model)
 
     def forward(self, src, key_padding_mask=None, attn_mask=None):
         """
@@ -75,6 +82,7 @@ class SimpleFuncsRow(nn.Module):
           src_types = F.normalize(self.type_inference(src), dim=2)
           src_mask = func.get_mask(src_types)
           temp = temp + func(src, src_mask, **factory_kwargs)
+        temp = self.layernorm(temp)
         return temp
   
 class SimpleRowIter(nn.Module):
@@ -84,12 +92,14 @@ class SimpleRowIter(nn.Module):
         super(SimpleRowIter, self).__init__()
         self.funcs_row =  SimpleFuncsRow(**factory_kwargs)
         self.num_iter = num_iter
+        self.layernorm = nn.LayerNorm(dim_model)
 
     def forward(self, src, key_padding_mask=None, attn_mask=None):
         factory_kwargs = {'key_padding_mask': key_padding_mask, 'attn_mask':attn_mask}
         temp = src 
         for iter_num in range(self.num_iter):
           temp = temp + self.funcs_row(temp, **factory_kwargs)
+          temp = self.layernorm(temp)
         return temp
 
 class SimpleEncoder(nn.Module):

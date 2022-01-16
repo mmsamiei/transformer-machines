@@ -3,11 +3,11 @@ import numpy as np
 import torch.nn as nn
 from torch.utils.data import Dataset
 
-class ClassifierMachine(nn.Module):
+class ClsMachine(nn.Module):
 
     def __init__(self, backbone_machine, num_cls, input_dim, max_len=128, device=None):
         factory_kwargs = {'device': device}
-        super(ClassifierMachine, self).__init__()
+        super(ClsMachine, self).__init__()
         self.backbone_machine = backbone_machine
         self.num_cls = num_cls
         self.max_len = max_len
@@ -34,7 +34,6 @@ class ClassifierMachine(nn.Module):
 
         temp = x
         temp = self.token_embedding(temp)
-        print(temp.shape)
         temp = temp + pos_batched[:, :len_inputs, :]
         temp = torch.cat((cls_batched, temp), dim=1)
         temp = self.backbone_machine(temp)
