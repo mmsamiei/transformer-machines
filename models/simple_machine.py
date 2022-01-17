@@ -32,7 +32,8 @@ class SimpleFunc(nn.Module):
         normalized_x = F.normalize(src, dim=2)
         scores = (normalized_x @ self.type_vec)
         scores = F.softmax(scores, 1)
-        mask = 1 - ((scores > threshold).type(torch.uint8))
+        #mask = 1 - ((scores > threshold).type(torch.uint8))
+        mask = torch.logical_not((scores > threshold))
         return mask
 
 
