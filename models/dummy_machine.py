@@ -52,7 +52,7 @@ class DummyFuncsRow(nn.Module):
         factory_kwargs = {'dim_model': dim_model, 'dim_hid':dim_hid, 'device': device, 'dropout': dropout, 'activation': activation}
         super(DummyFuncsRow, self).__init__()
         self.funcs = nn.ModuleList([DummyFunc(**factory_kwargs) for i in range(num_funcs)])
-        self.type_inference = nn.Sequential(nn.Linear(dim_model, dim_hid), nn.ReLU(), nn.Linear(dim_hid, dim_model)).to(device)
+        self.type_inference = nn.Sequential(nn.Linear(dim_model, dim_hid, **factory_kwargs), nn.ReLU(), nn.Linear(dim_hid, dim_model, **factory_kwargs)).to(device)
 
     def forward(self, src):
         """
