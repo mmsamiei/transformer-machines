@@ -23,7 +23,7 @@ class DummyFunc(nn.Module):
         normalized_x = F.normalize(src, dim=2)
         scores = (normalized_x @ self.type_vec)
         scores = F.softmax(scores, 1)
-        mask = (scores > threshold).type(torch.uint8)
+        mask = 1 - ((scores > threshold).type(torch.uint8))
         return mask
 
 
@@ -37,7 +37,7 @@ class DummyFunc(nn.Module):
         temp = self.dropout(self.activation(temp))
         temp = self.activation(self.linear2(temp))
         mask = src_mask.unsqueeze(-1).repeat(1,1,src.shape[-1])
-        temp = temp.masked_fill(mask == 0 , 0)
+        temp = temp.masked_fill(mask == 1 , 0)
         temp = src + temp
         return temp
 
