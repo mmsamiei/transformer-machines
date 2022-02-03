@@ -63,7 +63,7 @@ class SimpleFuncsRow(nn.Module):
                           'num_heads':num_heads}
         super(SimpleFuncsRow, self).__init__()
         self.funcs = nn.ModuleList([SimpleFunc(**factory_kwargs) for i in range(num_funcs)])
-        self.type_inference = nn.Sequential(nn.Linear(dim_model, dim_hid), nn.ReLU(), nn.Linear(dim_hid, dim_model)).to(device)
+        self.type_inference = nn.Sequential(nn.Linear(dim_model, dim_hid, device=device), nn.ReLU(), nn.Linear(dim_hid, dim_model, device=device)).to(device)
 
     def forward(self, src, key_padding_mask=None, attn_mask=None):
         """
@@ -74,7 +74,6 @@ class SimpleFuncsRow(nn.Module):
         for func in self.funcs:
           src_types = F.normalize(self.type_inference(src), dim=2)
           src_mask = func.get_mask(src_types)
-          print(src_mask[0])
           temp = temp + func(src, src_mask, **factory_kwargs)
         return temp
   
