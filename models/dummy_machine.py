@@ -27,17 +27,21 @@ class DummyFunc(nn.Module):
         return mask
 
 
-    def forward(self, src, src_mask=None):
+    def forward(self, src, func_mask, key_padding_mask = None):
         """
         src: tensor in shape [batch, src_len, dim_model]
         src_mask: tensor in shape [batch, src_len]
         """
         temp = src 
+        if key_padding_mask is not None:   
+            mask = (func_mask.logical_or(key_padding_mask)).type(torch.uint8)
+        else:
+            mask = func_mask
         temp = self.linear1(temp)
         temp = self.dropout(self.activation(temp))
         temp = self.activation(self.linear2(temp))
-        mask = src_mask.unsqueeze(-1).repeat(1,1,src.shape[-1])
-        temp = temp.masked_fill(mask == 1 , 0)
+        output_mask = mask.unsqueeze(-1).repeat(1,1,src.shape[-1])
+        temp = temp.masked_fill(output_mask == 1 , 0)
         temp = src + temp
         return temp
 
