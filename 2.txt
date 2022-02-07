@@ -1,0 +1,404 @@
+Files already downloaded and verified
+Files already downloaded and verified
+19028234
+Loss:  1.7360225653709354
+Accuracy of the network on the 10000 test images: 45.05 %
+Loss:  1.5171161569902658
+Accuracy of the network on the 10000 test images: 48.14 %
+Loss:  1.4635861365081708
+Accuracy of the network on the 10000 test images: 49.86 %
+Loss:  1.432395175594808
+Accuracy of the network on the 10000 test images: 50.86 %
+Loss:  1.41507531066075
+Accuracy of the network on the 10000 test images: 51.81 %
+Loss:  1.3890840080388063
+Accuracy of the network on the 10000 test images: 52.28 %
+Loss:  1.3733837695987634
+Accuracy of the network on the 10000 test images: 52.77 %
+Loss:  1.365367328724288
+Accuracy of the network on the 10000 test images: 52.75 %
+Loss:  1.356307780041414
+Accuracy of the network on the 10000 test images: 52.85 %
+Loss:  1.3451737680703477
+Accuracy of the network on the 10000 test images: 53.7 %
+Loss:  1.331546249901852
+Accuracy of the network on the 10000 test images: 53.97 %
+Loss:  1.3288372099552008
+Accuracy of the network on the 10000 test images: 54.32 %
+Loss:  1.313920125936913
+Accuracy of the network on the 10000 test images: 54.44 %
+Loss:  1.3080171691182325
+Accuracy of the network on the 10000 test images: 54.61 %
+Loss:  1.2965784804595402
+Accuracy of the network on the 10000 test images: 54.99 %
+Loss:  1.289294205358266
+Accuracy of the network on the 10000 test images: 55.32 %
+Loss:  1.2848927392374219
+Accuracy of the network on the 10000 test images: 55.21 %
+Loss:  1.277019432743492
+Accuracy of the network on the 10000 test images: 56.07 %
+Loss:  1.268708668096596
+Accuracy of the network on the 10000 test images: 55.96 %
+Loss:  1.2623754796164726
+Accuracy of the network on the 10000 test images: 55.77 %
+Loss:  1.2543198583680955
+Accuracy of the network on the 10000 test images: 56.4 %
+Loss:  1.250186954008039
+Accuracy of the network on the 10000 test images: 56.09 %
+Loss:  1.2425012061053224
+Accuracy of the network on the 10000 test images: 56.35 %
+Loss:  1.2356126119413644
+Accuracy of the network on the 10000 test images: 56.49 %
+Loss:  1.2299002116293554
+Accuracy of the network on the 10000 test images: 56.74 %
+Loss:  1.221959480391744
+Accuracy of the network on the 10000 test images: 56.92 %
+Loss:  1.218238129792616
+Accuracy of the network on the 10000 test images: 57.04 %
+Loss:  1.208968759192835
+Accuracy of the network on the 10000 test images: 57.12 %
+Loss:  1.2094925696892507
+Accuracy of the network on the 10000 test images: 57.03 %
+Loss:  1.2085603387154582
+Accuracy of the network on the 10000 test images: 56.92 %
+Loss:  1.2024796574621859
+Accuracy of the network on the 10000 test images: 57.08 %
+Loss:  1.1985766870896224
+Accuracy of the network on the 10000 test images: 57.04 %
+Loss:  1.1963593568033575
+Accuracy of the network on the 10000 test images: 57.33 %
+Loss:  1.194622165559198
+Accuracy of the network on the 10000 test images: 57.15 %
+Loss:  1.18950675363126
+Accuracy of the network on the 10000 test images: 57.35 %
+Loss:  1.1906838947549805
+Accuracy of the network on the 10000 test images: 57.67 %
+Loss:  1.1826183571839881
+Accuracy of the network on the 10000 test images: 57.91 %
+Loss:  1.1820495936571789
+Accuracy of the network on the 10000 test images: 57.51 %
+Loss:  1.1792444960235635
+Accuracy of the network on the 10000 test images: 57.71 %
+Loss:  1.1751481392194547
+Accuracy of the network on the 10000 test images: 57.72 %
+Loss:  1.1718879810074712
+Accuracy of the network on the 10000 test images: 57.97 %
+Loss:  1.1699727153229287
+Accuracy of the network on the 10000 test images: 57.66 %
+Loss:  1.168079019355042
+Accuracy of the network on the 10000 test images: 58.19 %
+Loss:  1.1662970090766087
+Accuracy of the network on the 10000 test images: 57.85 %
+Loss:  1.1615657483220405
+Accuracy of the network on the 10000 test images: 58.05 %
+Loss:  1.1595734213014393
+Accuracy of the network on the 10000 test images: 58.26 %
+Loss:  1.1554717432202586
+Accuracy of the network on the 10000 test images: 58.32 %
+Loss:  1.1569535178906472
+Accuracy of the network on the 10000 test images: 58.3 %
+Loss:  1.1530869060465136
+Accuracy of the network on the 10000 test images: 58.25 %
+Loss:  1.1501875158466037
+Accuracy of the network on the 10000 test images: 58.56 %
+Loss:  1.1458612860316206
+Accuracy of the network on the 10000 test images: 58.91 %
+Loss:  1.142686717193145
+Accuracy of the network on the 10000 test images: 58.43 %
+Loss:  1.1455887923460177
+Accuracy of the network on the 10000 test images: 58.31 %
+Loss:  1.1426830425896608
+Accuracy of the network on the 10000 test images: 58.75 %
+Loss:  1.1338311706662483
+Accuracy of the network on the 10000 test images: 58.82 %
+Loss:  1.1356554668577736
+Accuracy of the network on the 10000 test images: 58.49 %
+Loss:  1.1316071785319493
+Accuracy of the network on the 10000 test images: 58.9 %
+Loss:  1.1265576870545098
+Accuracy of the network on the 10000 test images: 59.2 %
+Loss:  1.125877987698216
+Accuracy of the network on the 10000 test images: 58.92 %
+Loss:  1.1233486615483412
+Accuracy of the network on the 10000 test images: 59.03 %
+Loss:  1.1201818341489338
+Accuracy of the network on the 10000 test images: 58.77 %
+Loss:  1.1134332602896044
+Accuracy of the network on the 10000 test images: 59.14 %
+Loss:  1.1183032901085856
+Accuracy of the network on the 10000 test images: 59.12 %
+Loss:  1.1173995817103959
+Accuracy of the network on the 10000 test images: 58.87 %
+Loss:  1.1121813382029229
+Accuracy of the network on the 10000 test images: 59.34 %
+Loss:  1.1114931605051241
+Accuracy of the network on the 10000 test images: 59.4 %
+Loss:  1.1069433184535913
+Accuracy of the network on the 10000 test images: 59.87 %
+Loss:  1.1089661153381134
+Accuracy of the network on the 10000 test images: 59.45 %
+Loss:  1.1030497791822
+Accuracy of the network on the 10000 test images: 59.92 %
+Loss:  1.104170200617417
+Accuracy of the network on the 10000 test images: 59.34 %
+Loss:  1.0994560959394022
+Accuracy of the network on the 10000 test images: 59.85 %
+Loss:  1.096938240863478
+Accuracy of the network on the 10000 test images: 59.94 %
+Loss:  1.0901052403023175
+Accuracy of the network on the 10000 test images: 59.51 %
+Loss:  1.0906513217465041
+Accuracy of the network on the 10000 test images: 59.78 %
+Loss:  1.0859232026597727
+Accuracy of the network on the 10000 test images: 59.99 %
+Loss:  1.0905113590647801
+Accuracy of the network on the 10000 test images: 60.1 %
+Loss:  1.0802384724702372
+Accuracy of the network on the 10000 test images: 60.24 %
+Loss:  1.0816158033392924
+Accuracy of the network on the 10000 test images: 59.94 %
+Loss:  1.0796428767921369
+Accuracy of the network on the 10000 test images: 60.03 %
+Loss:  1.083238990258073
+Accuracy of the network on the 10000 test images: 60.1 %
+Loss:  1.07903162079394
+Accuracy of the network on the 10000 test images: 60.47 %
+Loss:  1.0770825551598884
+Accuracy of the network on the 10000 test images: 60.35 %
+Loss:  1.0747589952195697
+Accuracy of the network on the 10000 test images: 60.35 %
+Loss:  1.0739155480318971
+Accuracy of the network on the 10000 test images: 60.18 %
+Loss:  1.0678537385847868
+Accuracy of the network on the 10000 test images: 60.48 %
+Loss:  1.0668214411686754
+Accuracy of the network on the 10000 test images: 60.32 %
+Loss:  1.0693451646343826
+Accuracy of the network on the 10000 test images: 60.23 %
+Loss:  1.0603311263081971
+Accuracy of the network on the 10000 test images: 60.79 %
+Loss:  1.063450920307423
+Accuracy of the network on the 10000 test images: 60.42 %
+Loss:  1.0560941254086507
+Accuracy of the network on the 10000 test images: 60.82 %
+Loss:  1.0540011666924751
+Accuracy of the network on the 10000 test images: 60.71 %
+Loss:  1.056300362357703
+Accuracy of the network on the 10000 test images: 60.71 %
+Loss:  1.0510862387354722
+Accuracy of the network on the 10000 test images: 60.73 %
+Loss:  1.0540266171135866
+Accuracy of the network on the 10000 test images: 60.49 %
+Loss:  1.0494896970746461
+Accuracy of the network on the 10000 test images: 60.73 %
+Loss:  1.0499744526565533
+Accuracy of the network on the 10000 test images: 60.49 %
+Loss:  1.0484541570743942
+Accuracy of the network on the 10000 test images: 60.92 %
+Loss:  1.0386231866334101
+Accuracy of the network on the 10000 test images: 60.66 %
+Loss:  1.0462820747929156
+Accuracy of the network on the 10000 test images: 61.38 %
+Loss:  1.0390428844315316
+Accuracy of the network on the 10000 test images: 61.47 %
+Loss:  1.037190815524372
+Accuracy of the network on the 10000 test images: 60.85 %
+Loss:  1.0372367492112358
+Accuracy of the network on the 10000 test images: 61.1 %
+Loss:  1.0337748404049203
+Accuracy of the network on the 10000 test images: 60.98 %
+Loss:  1.0398094329382757
+Accuracy of the network on the 10000 test images: 61.25 %
+Loss:  1.0306305429514717
+Accuracy of the network on the 10000 test images: 60.92 %
+Loss:  1.0282674000391265
+Accuracy of the network on the 10000 test images: 61.18 %
+Loss:  1.0282531668767905
+Accuracy of the network on the 10000 test images: 60.9 %
+Loss:  1.0259141557661773
+Accuracy of the network on the 10000 test images: 61.1 %
+Loss:  1.0253274257835525
+Accuracy of the network on the 10000 test images: 61.56 %
+Loss:  1.0192289384429718
+Accuracy of the network on the 10000 test images: 61.07 %
+Loss:  1.0201872817390716
+Accuracy of the network on the 10000 test images: 61.44 %
+Loss:  1.0163060373357495
+Accuracy of the network on the 10000 test images: 60.91 %
+Loss:  1.0132370714641288
+Accuracy of the network on the 10000 test images: 61.57 %
+Loss:  1.01866427955725
+Accuracy of the network on the 10000 test images: 61.66 %
+Loss:  1.0134574324273697
+Accuracy of the network on the 10000 test images: 61.43 %
+Loss:  1.010552321248652
+Accuracy of the network on the 10000 test images: 61.47 %
+Loss:  1.0113805099521451
+Accuracy of the network on the 10000 test images: 61.56 %
+Loss:  1.0084392279005416
+Accuracy of the network on the 10000 test images: 61.55 %
+Loss:  1.0078566726821159
+Accuracy of the network on the 10000 test images: 61.67 %
+Loss:  1.007627188244744
+Accuracy of the network on the 10000 test images: 61.8 %
+Loss:  1.0091364761752546
+Accuracy of the network on the 10000 test images: 61.51 %
+Loss:  1.0028127838888437
+Accuracy of the network on the 10000 test images: 61.87 %
+Loss:  0.994234449265863
+Accuracy of the network on the 10000 test images: 61.71 %
+Loss:  1.0009127925424015
+Accuracy of the network on the 10000 test images: 61.57 %
+Loss:  0.9978172411699124
+Accuracy of the network on the 10000 test images: 61.8 %
+Loss:  0.9996866914622314
+Accuracy of the network on the 10000 test images: 62.05 %
+Loss:  0.9959632136937603
+Accuracy of the network on the 10000 test images: 62.06 %
+Loss:  0.9881993937675301
+Accuracy of the network on the 10000 test images: 61.94 %
+Loss:  0.993744411736803
+Accuracy of the network on the 10000 test images: 62.19 %
+Loss:  0.9922048322989813
+Accuracy of the network on the 10000 test images: 62.15 %
+Loss:  0.9851349519036919
+Accuracy of the network on the 10000 test images: 62.03 %
+Loss:  0.9879887151291303
+Accuracy of the network on the 10000 test images: 61.83 %
+Loss:  0.9852068941001697
+Accuracy of the network on the 10000 test images: 62.45 %
+Loss:  0.9824625460997872
+Accuracy of the network on the 10000 test images: 62.71 %
+Loss:  0.9832953604895746
+Accuracy of the network on the 10000 test images: 62.37 %
+Loss:  0.9787155799853527
+Accuracy of the network on the 10000 test images: 62.2 %
+Loss:  0.9756395117096279
+Accuracy of the network on the 10000 test images: 62.62 %
+Loss:  0.9730155085358778
+Accuracy of the network on the 10000 test images: 62.61 %
+Loss:  0.975759062925568
+Accuracy of the network on the 10000 test images: 62.25 %
+Loss:  0.9726524755473027
+Accuracy of the network on the 10000 test images: 62.59 %
+Loss:  0.9710265487966026
+Accuracy of the network on the 10000 test images: 62.42 %
+Loss:  0.9670785846917526
+Accuracy of the network on the 10000 test images: 62.53 %
+Loss:  0.9677183228685423
+Accuracy of the network on the 10000 test images: 62.12 %
+Loss:  0.964565933055585
+Accuracy of the network on the 10000 test images: 62.43 %
+Loss:  0.9637114129712819
+Accuracy of the network on the 10000 test images: 62.62 %
+Loss:  0.9649605717500458
+Accuracy of the network on the 10000 test images: 62.75 %
+Loss:  0.9627618079295244
+Accuracy of the network on the 10000 test images: 62.18 %
+Loss:  0.9631858422323261
+Accuracy of the network on the 10000 test images: 62.23 %
+Loss:  0.9628650221373419
+Accuracy of the network on the 10000 test images: 62.87 %
+Loss:  0.9570821959649205
+Accuracy of the network on the 10000 test images: 62.56 %
+Loss:  0.9554759381372301
+Accuracy of the network on the 10000 test images: 62.26 %
+Loss:  0.9539358152452942
+Accuracy of the network on the 10000 test images: 62.99 %
+Loss:  0.9511568122507666
+Accuracy of the network on the 10000 test images: 62.86 %
+Loss:  0.9526723400711099
+Accuracy of the network on the 10000 test images: 62.92 %
+Loss:  0.949380483163897
+Accuracy of the network on the 10000 test images: 62.9 %
+Loss:  0.9509341849390504
+Accuracy of the network on the 10000 test images: 62.73 %
+Loss:  0.9442964548345112
+Accuracy of the network on the 10000 test images: 62.79 %
+Loss:  0.941919191414133
+Accuracy of the network on the 10000 test images: 62.66 %
+Loss:  0.9409763087397036
+Accuracy of the network on the 10000 test images: 63.05 %
+Loss:  0.9408201229236924
+Accuracy of the network on the 10000 test images: 62.98 %
+Loss:  0.9400836622623532
+Accuracy of the network on the 10000 test images: 63.13 %
+Loss:  0.941323087495916
+Accuracy of the network on the 10000 test images: 63.2 %
+Loss:  0.9314690090506278
+Accuracy of the network on the 10000 test images: 62.47 %
+Loss:  0.9358634168229749
+Accuracy of the network on the 10000 test images: 62.78 %
+Loss:  0.9349190172027139
+Accuracy of the network on the 10000 test images: 62.88 %
+Loss:  0.9311828627000989
+Accuracy of the network on the 10000 test images: 62.78 %
+Loss:  0.9333828375162676
+Accuracy of the network on the 10000 test images: 62.95 %
+Loss:  0.9346431786446925
+Accuracy of the network on the 10000 test images: 62.28 %
+Loss:  0.9296122050041433
+Accuracy of the network on the 10000 test images: 62.82 %
+Loss:  0.9317586004276714
+Accuracy of the network on the 10000 test images: 62.54 %
+Loss:  0.9259407001992931
+Accuracy of the network on the 10000 test images: 62.93 %
+Loss:  0.9280076593999058
+Accuracy of the network on the 10000 test images: 62.77 %
+Loss:  0.92197429386856
+Accuracy of the network on the 10000 test images: 62.89 %
+Loss:  0.9215379509779499
+Accuracy of the network on the 10000 test images: 62.71 %
+Loss:  0.9197431150299814
+Accuracy of the network on the 10000 test images: 63.05 %
+Loss:  0.919588678175836
+Accuracy of the network on the 10000 test images: 63.04 %
+Loss:  0.9158338934869108
+Accuracy of the network on the 10000 test images: 63.14 %
+Loss:  0.9202168283560087
+Accuracy of the network on the 10000 test images: 62.9 %
+Loss:  0.9166187128752393
+Accuracy of the network on the 10000 test images: 63.2 %
+Loss:  0.9114303476060442
+Accuracy of the network on the 10000 test images: 63.03 %
+Loss:  0.9130825997923341
+Accuracy of the network on the 10000 test images: 62.95 %
+Loss:  0.9064324423480217
+Accuracy of the network on the 10000 test images: 63.28 %
+Loss:  0.9073563347692075
+Accuracy of the network on the 10000 test images: 63.32 %
+Loss:  0.9064130164168375
+Accuracy of the network on the 10000 test images: 62.77 %
+Loss:  0.9059628399131853
+Accuracy of the network on the 10000 test images: 63.1 %
+Loss:  0.9015660630467602
+Accuracy of the network on the 10000 test images: 62.86 %
+Loss:  0.9054354793580291
+Accuracy of the network on the 10000 test images: 63.01 %
+Loss:  0.9022914668178315
+Accuracy of the network on the 10000 test images: 62.67 %
+Loss:  0.9041089415550232
+Accuracy of the network on the 10000 test images: 63.05 %
+Loss:  0.8976196041497428
+Accuracy of the network on the 10000 test images: 63.41 %
+Loss:  0.9031131647127059
+Accuracy of the network on the 10000 test images: 62.99 %
+Loss:  0.8989469407464538
+Accuracy of the network on the 10000 test images: 62.68 %
+Loss:  0.8944724508563576
+Accuracy of the network on the 10000 test images: 62.86 %
+Loss:  0.9004140406313454
+Accuracy of the network on the 10000 test images: 63.62 %
+Loss:  0.8921330748006816
+Accuracy of the network on the 10000 test images: 63.35 %
+Loss:  0.892868448096468
+Accuracy of the network on the 10000 test images: 63.36 %
+Loss:  0.8887720225412218
+Accuracy of the network on the 10000 test images: 63.5 %
+Loss:  0.8889453138231926
+Accuracy of the network on the 10000 test images: 63.24 %
+Loss:  0.8917644911105066
+Accuracy of the network on the 10000 test images: 63.15 %
+Loss:  0.8876478932702633
+Accuracy of the network on the 10000 test images: 62.88 %
+Finished Training
