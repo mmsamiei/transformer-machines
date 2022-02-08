@@ -23,7 +23,6 @@ class ClsMachine(nn.Module):
         """
         Args:
             x: tensor with shape [batch, len, input_dim]
-            param2: This is a second param.
 
         Returns:
             This is a description of what is returned.
@@ -33,6 +32,7 @@ class ClsMachine(nn.Module):
         pos_batched = self.pos_embeddings.unsqueeze(0).repeat(batch_size, 1, 1)
 
         temp = x
+        
         temp = self.token_embedding(temp)
         temp = temp + pos_batched[:, :len_inputs, :]
         temp = torch.cat((cls_batched, temp), dim=1)

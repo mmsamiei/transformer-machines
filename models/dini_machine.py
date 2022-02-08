@@ -271,6 +271,7 @@ class DiniEncoder(nn.Module):
         'num_funcs':num_funcs,'type_size':type_size,'code_size':code_size, 'threshold':threshold,\
         'num_locs': num_locs,'num_mlp_layers':num_mlp_layers, 'dropout': dropout}
 
+        self.dim_model = hid_dim
         self.layers = nn.ModuleList([DiniFuncRowIter(**diniFuncRowIter_factory_kwargs) for i in range(num_layer)])
         self.layernorm1 = nn.LayerNorm(hid_dim)
 
