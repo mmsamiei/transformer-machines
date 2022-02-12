@@ -15,7 +15,7 @@ import math
 batch_size = 128
 
 dataset = fuzzy_boolean_dataset.FuzzyBooleanDataset('data/fbd.npy')
-train_len = int( 0.1 * len(dataset) ) 
+train_len = int( 0.8 * len(dataset) ) 
 val_len = len(dataset) - train_len
 train_set, val_set = torch.utils.data.random_split(dataset, [train_len, val_len])
 trainloader = torch.utils.data.DataLoader(train_set, batch_size=batch_size, \
