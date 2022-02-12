@@ -43,7 +43,7 @@ class SOPBooleanDataset(Dataset):
 
     
     def __len__(self):
-        return len(self.num_points)
+        return self.num_points
 
     def __getitem__(self, idx):
         return self.X[idx], self.Y[idx]

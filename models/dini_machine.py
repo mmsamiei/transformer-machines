@@ -205,17 +205,26 @@ class DiniFunc(nn.Module):
 
 class DiniFuncRow(nn.Module):
 
-    def __init__(self, hid_dim, n_heads, num_funcs, type_size, code_size, threshold, num_locs, num_mlp_layers, dropout):
+    def __init__(self, hid_dim, n_heads, num_funcs, type_size, code_size, type_inference_depth, type_inference_width, threshold, num_locs, num_mlp_layers, dropout):
         super(DiniFuncRow, self).__init__()
         self.W = nn.parameter.Parameter(torch.randn(hid_dim, hid_dim), requires_grad=True)
         self.b =nn.parameter.Parameter(torch.randn(hid_dim), requires_grad=True)
         self.threshold = threshold
+        self.type_inference_depth = type_inference_depth
+        self.type_inference_width = type_inference_width
         func_factory_kwargs = {'hid_dim': hid_dim, 'n_heads': n_heads, 'type_size':type_size,\
         'code_size':code_size, 'num_locs': num_locs, 'W':self.W, 'b':self.b, 'num_mlp_layers':num_mlp_layers,\
-            'dropout': dropout}
+        'dropout': dropout}
         self.funcs = nn.ModuleList([DiniFunc(**func_factory_kwargs) for i in range(num_funcs)])
-        self.type_inference = nn.Sequential(nn.Linear(hid_dim, 2*hid_dim), nn.ReLU(), nn.Linear(2*hid_dim, type_size))
-        self.sigma = 10
+        #self.type_inference = nn.Sequential(nn.Linear(hid_dim, hid_dim), nn.ReLU(), nn.Linear(hid_dim, type_size))
+        
+        
+        type_inference_list = [nn.Linear(hid_dim, type_inference_width), nn.ReLU()] +\
+            [sublayer for i in range(type_inference_depth) for sublayer in [nn.Linear(type_inference_width, type_inference_width), nn.ReLU()]] +\
+            [nn.Linear(type_inference_width, type_size)]
+
+        self.type_inference = nn.Sequential(*type_inference_list)
+        self.sigma = 1
         self.layernorm1 = nn.LayerNorm(hid_dim)
 
     def get_compability_matrix(self, x):
@@ -243,11 +252,12 @@ class DiniFuncRow(nn.Module):
 
 class DiniFuncRowIter(nn.Module):
 
-    def __init__(self, hid_dim, n_heads, num_iter, num_funcs, type_size, code_size, threshold, num_locs, num_mlp_layers, dropout):
+    def __init__(self, hid_dim, n_heads, num_iter, num_funcs, type_size, code_size, type_inference_depth, type_inference_width, threshold, num_locs, num_mlp_layers, dropout):
         super(DiniFuncRowIter, self).__init__()
         funcrow_factory_kwargs = {'hid_dim': hid_dim, 'n_heads': n_heads, 'num_funcs':num_funcs,\
-        'type_size':type_size,'code_size':code_size, 'threshold':threshold, 'num_locs': num_locs,\
-            'num_mlp_layers':num_mlp_layers, 'dropout': dropout}
+        'type_size':type_size,'code_size':code_size, 'type_inference_depth': type_inference_depth,\
+        'type_inference_width':type_inference_width, 'threshold':threshold, 'num_locs': num_locs,\
+        'num_mlp_layers':num_mlp_layers, 'dropout': dropout}
         self.funcs_row = DiniFuncRow(**funcrow_factory_kwargs)
         self.num_iter = num_iter
         self.layernorm1 = nn.LayerNorm(hid_dim)
@@ -264,12 +274,13 @@ class DiniFuncRowIter(nn.Module):
 
 
 class DiniEncoder(nn.Module):
-    def __init__(self, hid_dim, n_heads, num_layer, num_iter, num_funcs, type_size, code_size, threshold, num_locs, num_mlp_layers, dropout):
+    def __init__(self, hid_dim, n_heads, num_layer, num_iter, num_funcs, type_size, code_size, type_inference_depth, type_inference_width, threshold, num_locs, num_mlp_layers, dropout):
         super(DiniEncoder, self).__init__()
         
         diniFuncRowIter_factory_kwargs = {'hid_dim': hid_dim, 'n_heads': n_heads, 'num_iter':num_iter,\
-        'num_funcs':num_funcs,'type_size':type_size,'code_size':code_size, 'threshold':threshold,\
-        'num_locs': num_locs,'num_mlp_layers':num_mlp_layers, 'dropout': dropout}
+        'num_funcs':num_funcs,'type_size':type_size,'code_size':code_size, 'type_inference_depth':type_inference_depth,\
+        'type_inference_width':type_inference_width, 'threshold':threshold,'num_locs': num_locs,\
+        'num_mlp_layers':num_mlp_layers, 'dropout': dropout}
 
         self.dim_model = hid_dim
         self.layers = nn.ModuleList([DiniFuncRowIter(**diniFuncRowIter_factory_kwargs) for i in range(num_layer)])
